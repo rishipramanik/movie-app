@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 
 import Card from '../ui/Card';
-import classes from './MeetupItem.module.css'
+import classes from './MovieItem.module.css'
 import FavoritesContext from '../../store/favorites-context';
 
-function MeetupItem(props) {
+function MovieItem(props) {
     const favoritesCtx = useContext(FavoritesContext)
 
     const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
@@ -17,8 +17,8 @@ function MeetupItem(props) {
             favoritesCtx.addFavorite({
                 id: props.id,
                 title: props.title,
-                image: props.image,
-                address: props.address,
+                genre: props.genre,
+                cast: props.cast,
                 description: props.description
 
             })
@@ -28,13 +28,15 @@ function MeetupItem(props) {
     return(
         <li className={classes.item}>
             <Card>
-            <div className={classes.image}>
-                <img src={props.image} alt={props.title} />
-            </div>
+            {/* <div className={classes.genre}>
+                <img src={props.genre} alt={props.title} />
+            </div> */}
             <div className={classes.content}>
-                <h3>{props.title}</h3>
-                <address>{props.address}</address>
-                <p>{props.description}</p>
+                <h2>{props.title}</h2>
+                <h4>{props.genre}</h4>
+                <p><b>Cast:</b> {props.cast}&emsp;
+                <b>Language:</b> {props.lang}</p>
+                <p><b>Movie Description:</b> <br />{props.description}</p>
             </div>
             <div className={classes.actions}>
                 <button onClick={togglefavoriteStatusHandler}>{itemIsFavorite ? 'Remove favorite' : 'Add Favorite'}</button>
@@ -44,4 +46,4 @@ function MeetupItem(props) {
     )
 }
 
-export default MeetupItem;
+export default MovieItem;

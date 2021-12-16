@@ -1,7 +1,7 @@
 import {Route, Switch} from 'react-router-dom';
 
-import AllMeetups from './pages/AllMeetups';
-import NewMeetups from './pages/NewMeetup';
+import AllMovies from './pages/AllMovies';
+import NewMovies from './pages/NewMovie';
 import Favorites from './pages/Favorites';
 import Layout from './components/layout/Layout';
 
@@ -10,11 +10,11 @@ function App() {
     <Layout>
     <Switch>
     <Route path='/' exact>
-      <AllMeetups />
+      <AllMovies />
     </Route>
-    <Route path='/new-meetup'><NewMeetups />
+    <Route path='/new-movie'><NewMovies />
     </Route>
-    <Route path='/all-meetup'><AllMeetups />
+    <Route path='/all-movie'><AllMovies />
     </Route>
     <Route path='/favorites'><Favorites />
     </Route>

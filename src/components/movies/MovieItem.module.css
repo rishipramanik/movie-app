@@ -1,23 +1,23 @@
 .item {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
   
-  .image {
+  /* .genre {
     width: 100%;
     height: 20rem;
     overflow: hidden;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-  }
+  } */
   
-  .image img {
+  /* .genre img {
     width: 100%;
     object-fit: cover;
-  }
+  } */
   
   .content {
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   .content h3 {
@@ -26,15 +26,15 @@
   }
   
   .actions {
-    padding: 1.5rem;
+    padding: 0.5rem;
     text-align: center;
   }
   
   .actions button {
     font: inherit;
     cursor: pointer;
-    color: #77002e;
-    border: 1px solid #77002e;
+    color: #1a0077;
+    border: 1px solid #0c0077;
     background-color: transparent;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;

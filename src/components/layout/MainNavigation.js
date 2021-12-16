@@ -9,14 +9,14 @@ function MainNavigation() {
     const favoritesCtx= useContext(FavoritesContext);
     return (
         <header className={classes.header}>
-        <div className = {classes.logo}>React Meetups</div>
+        <div className = {classes.logo}>Movies &amp; More</div>
         <nav>
         <ul>
         <li>
-        <Link to='/'>All Meetups</Link>
+        <Link to='/'>All Movies</Link>
         </li>
         <li>
-        <Link to='/new-meetup'>New Meetup</Link>
+        <Link to='/new-movie'>New Movie</Link>
         </li>
         <li>
         <Link to='/favorites'>Favorites
