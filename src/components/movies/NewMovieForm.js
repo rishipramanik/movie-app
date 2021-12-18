@@ -1,7 +1,8 @@
 import { useRef } from "react";
-
 import Card from "../ui/Card"
 import classes from './NewMovieForm.module.css'
+
+//this function is for creating the form for adding movies
 
 function NewMovieForm(props){
     const titleInputRef = useRef();
@@ -9,6 +10,8 @@ function NewMovieForm(props){
     const castInputRef = useRef();
     const langInputRef = useRef();
     const descriptionInputRef = useRef();
+
+//This function is for sacing the data on Submit
 
     function submitHandler(event) {
         event.preventDefault();
